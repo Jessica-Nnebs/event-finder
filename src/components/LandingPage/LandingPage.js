@@ -127,17 +127,18 @@ function LandingPage() {
   }
 
   return (
-    <div>
-      <div class="px-12">
+    <div class="container mx-auto">
+      <div class="">
         <p class="text-6xl font-bold text-gray-800 mt-20">eventi</p>
         <p class="text-xl font-light mt-2 md:pb-0 mb-6 bg-gradient-to-r from-purple-900 via-pink-400 to-red-600 bg-clip-text text-transparent">
           the new way of finding and hosting events
         </p>
       </div>
 
-      <div className="relative z-50">
-        <div>
-          <form className="pt-4 content-center flex px-12 items-center">
+      <div>
+        <div className="relative z-50">
+          <div className="pt-4 content-center flex items-center">
+
             <input
               value={searchAddress}
               onChange={(e) => {
@@ -153,9 +154,9 @@ function LandingPage() {
             >
               Go
             </button>
-          </form>
+          </div>
 
-          <div class="origin-top-right absolute mt-2 w-auto rounded-2xl shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+          <div class="origin-top-right absolute mt-3 ml-6 w-auto rounded-2xl shadow-lg bg-white ring-1 ring-black ring-opacity-5">
             <div
               class="py-1"
               role="menu"
@@ -164,7 +165,7 @@ function LandingPage() {
             >
               {listAddresses.map((address) => {
                 return (
-                  <form>
+                  <div>
                     <button
                       onClick={() => {
                         setSearchAddress(address.formatted);
@@ -175,31 +176,40 @@ function LandingPage() {
                       type="button"
                       className={
                         showAddressButton &&
-                        !!searchAddress.length &&
-                        selectedAddress != searchAddress
+                          !!searchAddress.length &&
+                          selectedAddress != searchAddress
                           ? "block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
                           : "hidden block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
                       }
                     >
                       {address.formatted}
                     </button>
-                  </form>
+                  </div>
                 );
               })}
             </div>
           </div>
         </div>
 
-        <div>
-          <form
-            className="content-center px-12 pt-6"
-            value={searchText}
-            onChange={(e) => {
-              setSearchText(e.target.value);
-            }}
-          ></form>
+        <br />
+        <br />
+
+        <div className="relative z-0">
+          <div className="pt-4 content-center flex items-center">
+            <input
+              value={searchText}
+              onChange={(e) => {
+                setSearchText(e.target.value);
+              }}
+              className="absolute bg-gray-100 rounded-2xl px-4 py-2 container ml-auto focus:ring-purple-600 outline-none tracking-tighter"
+              placeholder="search for something!"
+              type="text"
+            />
+          </div>
         </div>
       </div>
+
+      <br />
 
       <div id="mapid" className="relative z-0">
         <div className="container">
@@ -255,7 +265,7 @@ function LandingPage() {
           </MapContainer>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 

@@ -244,8 +244,9 @@ function ExplorePage() {
                     <input class="mr-4" value={distanceRange} onChange={(e) => { setDistanceRange(e.target.value) }} type="range" min="2" max="20" step="2" />
                     <div>{distanceRange} km</div>
                 </form>
+            </div>
 
-               <div class="origin-top-right absolute left-0 mt-2 w-auto rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+            <div class="origin-top-right absolute mt-6 w-auto rounded-2xl shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                     <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                         {
                             listAddresses.map((address) => {
@@ -275,7 +276,6 @@ function ExplorePage() {
                         }
                     </div>
                 </div>
-            </div>
 
             <div class="container hidden md:block md:pr-12 md:space-x-8 py-6 text-center tracking-tighter" >
                 <p class=" text-3xl font-bold text-gray-800 my-12">sort it like it's hot</p>

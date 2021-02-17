@@ -17,6 +17,29 @@ function ProfilCard(props) {
         history.push("/");
     }
 
+    const userImagePrifileURL = `http://localhost:7777/usersimages/${props.userid}.png`
+    const [userImagePrifileState, setUserImagePrifileState] = useState(false)
+
+    useEffect(() => {
+        const checkIfUserhasAndImageAvailable = async () => {
+            try {
+                let imageRequest = await fetch(userImagePrifileURL)
+                const doesTheUserHasAnImageSaved = !!(imageRequest.status == 200)
+                console.log(imageRequest)
+                console.log(imageRequest.status)
+                console.log(doesTheUserHasAnImageSaved)
+                if (doesTheUserHasAnImageSaved) {
+                    setUserImagePrifileState(true)
+                } else {
+                    setUserImagePrifileState(false)
+                }
+            } catch (error) {
+                console.error(error)
+            }
+        }
+        checkIfUserhasAndImageAvailable()
+    }, [props.userid])
+
     const Eye = <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
@@ -26,37 +49,10 @@ function ProfilCard(props) {
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
     </svg>
 
-
     const [passwordShown, setPasswordShown] = useState(false);
     const togglePasswordVisiblity = () => {
         setPasswordShown(passwordShown ? false : true);
     };
-
-    // Profile image confimation
-    const userImagePrifileURL = `http://localhost:7777/usersimages/${props.userid}.png`
-    const [userImagePrifieState, setUserImagePrifileState] = useState(false)
-
-    useEffect(() => {
-        const checkIfUserhasAndImageAvailable = async () => {
-            try {
-                const userImageProfile = await fetch(userImagePrifileURL)
-
-                if (userImageProfile == 200) {
-                    console.log(userImageProfile)
-                    console.log(userImageProfile.status)
-                    setUserImagePrifileState(true)
-                } else {
-                    setUserImagePrifileState(false)
-                }
-            }
-
-            catch (error) {
-                console.error(error);
-                console.log('Found an error')
-            }
-        }
-        checkIfUserhasAndImageAvailable()
-    }, [])
 
     // SIGNOUT for user
     const signOut = async () => {
@@ -73,7 +69,7 @@ function ProfilCard(props) {
                 <div class="w-2/4 mx-auto text-gray-600">
                     <div class="h-24 w-24 mx-auto ">
                         {
-                            userImagePrifieState
+                            userImagePrifileState
                                 ?
                                 <div class="flex flex-wrap justify-center" >
                                     <div >
@@ -88,16 +84,16 @@ function ProfilCard(props) {
 
                     </div>
                     <div className="px-10 py-4">
-                        <div className="font-bold text-gray-600 text-l my-4 text-center tracking-tighter">
+                        <div className="font-bold text-gray-600 text-xl my-4 text-center tracking-tighter">
                             Hallo
                     </div>
-                        <div className="font-bold text-purple-600 text-xl my-4 text-center tracking-tighter">
+                        <div className="font-bold text-purple-600 text-5xl my-4 text-center tracking-tighter">
                             {props.firstname} {props.lastname}
                         </div>
 
-                        <ul id="details" className="py-4 text-left tracking-tighter">
-                            <li>
-                                <strong className="text-gray-400 ">Details</strong>
+                        <ul id="details" className="py-6 text-left tracking-tighter">
+                            <li class="mb-6">
+                                <strong className="text-gray-400 text-2xl">Details</strong>
                             </li>
                             <li class="flex mt-5">
                                 <div id="phone" class="h-6 w-6 mr-2">
@@ -120,7 +116,7 @@ function ProfilCard(props) {
                                     {props.email}
                                 </div>
                             </li>
-                            <li class="flex mt-5">
+                            <li class="flex mt-5 outline-none focus:outline-none">
                                 <div class="h-6 w-6 mr-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -133,7 +129,7 @@ function ProfilCard(props) {
                             </li>
                             <li class="flex mt-8">
                                 <div class="m-auto">
-                                    <button class="font-bold text-base uppercase flex items-center justify-center border-blue-600 border-2 py-2 px-4 rounded outline-none shadow-lg focus:outline-none text-blue-600 hover:bg-blue-600 hover:border-blue-600 hover:text-white hover:shadow-xl"
+                                    <button class="bg-blue-600 flex items-center justify-center hover:bg-blue-800 text-white font-bold uppercase py-2 px-4 rounded shadow-lg hover:shadow-xl outline-none focus:outline-none transition duration-200"
                                         onClick={() => setOpenEditModal(true)}>
                                         <svg class="h-8 w-8 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
@@ -156,14 +152,14 @@ function ProfilCard(props) {
                             />
                             : null}
                     </div>
-                    <div class="flex">
+                    <div class="flex -mt-4">
                         <button
-                            className="border-gray-400 text-gray-500 text-base flex items-center justify-center border-2 py-2 px-4 rounded shadow-sm hover:shadow-md outline-none hover:bg-gray-300 hover:text-white hover:border-gray-300 focus:outline-none m-auto my-4"
+                            className="border-gray-400 text-gray-500 text-base flex items-center justify-center border-2 py-2 px-4 rounded shadow-sm hover:shadow-md outline-none hover:bg-gray-300 hover:text-white hover:border-gray-300 focus:outline-none mx-auto"
                             type="button"
                             onClick={signOut}
 
                             style={{ transition: "all .15s ease" }}>
-                            Sign Out
+                            Sign out
                     </button>
                     </div>
                 </div>
