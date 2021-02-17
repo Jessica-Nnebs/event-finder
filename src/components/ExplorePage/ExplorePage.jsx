@@ -10,7 +10,6 @@ function ExplorePage() {
     const [category, setCategory] = useState('All');
     const [searchText, setSearchText] = useState('');
 
-
     const [searchAddress, setSearchAddress] = useState('');
     const [newAdddressGPSCoordinates, setNewAdddressGPSCoordinates] = useState({ lat: 0, lng: 0 })
     const [listAddresses, setListAddresses] = useState([])
@@ -22,7 +21,7 @@ function ExplorePage() {
     const [selectionStartDate, setSelectionStartDate] = useState('');
     const [selectionEndDate, setSelectionEndDate] = useState('');
 
-    // Address search and map positioning
+    // Address search and map positioning  
     useEffect(() => {
         const getCoordinates = async () => {
             try {
@@ -108,7 +107,7 @@ function ExplorePage() {
     }, [searchText, distanceRange, selectionStartDate, selectionEndDate, searchAddress, newAdddressGPSCoordinates]);
 
 
-    const smallActiveStyled = "px-2 py-1 rounded text-purple-700 underline bg-purple-100 focus:outline-none";
+    const smallActiveStyled = "px-2 py-1 rounded-md text-purple-700 underline bg-purple-100 focus:outline-none";
 
     const smallInactiveStyled = "px-2 py-1 font-light text-gray-400 focus:outline-none hover:text-purple-800 hover:underline hover:font-bold active:bg-none";
 
@@ -208,8 +207,8 @@ function ExplorePage() {
 
         <div className="container mx-auto">
             <div>
-                <form className="content-center md:flex lg:mt-32 md:mt-24 mt-12 block" value={searchText} onChange={(e) => { setSearchText(e.target.value) }} role="search">
-                    <p class="2xl:text-5xl xl:text-3xl lg:text-xl md:text-lg text-3xl font-bold text-gray-800 2xl:w-2/3 xl:w-2/5 lg:w-2/5 md:w-2/4 md:pb-0 pb-6">find out what's popping</p>
+                <form className="content-center md:flex pt-2 mt-24 block" value={searchText} onChange={(e) => { setSearchText(e.target.value) }} role="search">
+                    <p class="text-3xl font-bold text-gray-800 2xl:w-2/3 xl:w-2/5 lg:w-2/5 md:w-2/4 pb-6">find out what's popping</p>
                     <input className="bg-gray-100 rounded-2xl px-4 py-2 container focus:ring-purple-600 outline-none tracking-tighter" /* id="search" type="search" */ placeholder="search" />
                     <button className="hidden absolute inset-0 rounded-md" type="submit">Go</button>
                 </form>
@@ -246,7 +245,7 @@ function ExplorePage() {
                     <div>{distanceRange} km</div>
                 </form>
 
-               <div class="origin-top-right fixed content-center left-2/4 mt-2 w-auto rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+               <div class="origin-top-right absolute left-0 mt-2 w-auto rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                     <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                         {
                             listAddresses.map((address) => {
@@ -279,7 +278,7 @@ function ExplorePage() {
             </div>
 
             <div class="container hidden md:block md:pr-12 md:space-x-8 py-6 text-center tracking-tighter" >
-                <p class="2xl:text-3xl xl:text-xl lg:text-xl md:text-lg text-3xl font-bold text-gray-800 my-12">sort it like it's hot</p>
+                <p class=" text-3xl font-bold text-gray-800 my-12">sort it like it's hot</p>
                 <button 
                     onClick={() => setCategory('All') + setAllActive(activeStyled) + setYogaActive(inactiveStyled) + setMusicActive(inactiveStyled) + setLiteratureActive(inactiveStyled) + setFoodActive(inactiveStyled) + setPotteryActive(inactiveStyled) + setRandomActive(inactiveStyled) + setArchitectureActive(inactiveStyled)}
                     class={(allActive)}
@@ -368,5 +367,4 @@ function ExplorePage() {
         </div >
     )
 }
-
 export default ExplorePage
