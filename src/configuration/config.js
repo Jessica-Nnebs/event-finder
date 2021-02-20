@@ -1,3 +1,3 @@
   export default {
-      baseUrl: 'https://eventi-event-finder.herokuapp.com'
+      baseUrl: 'https://eventi-event-finder.herokuapp.com/'
   }
