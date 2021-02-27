@@ -1,14 +1,5 @@
 # eventi - the new way of finding and hosting events
-
-**Landing Page:**
-![animation-home](https://user-images.githubusercontent.com/64739763/109396817-a85ea500-7933-11eb-8865-8b1969dfbefa.gif)
-
-**Explore Page:**
-![animation-explore](https://user-images.githubusercontent.com/64739763/109397517-3d16d200-7937-11eb-98af-ab2d59dbf174.gif)
-
-
-# Project made by the Team Avengers Initiative 
-This project is developed within the Codemaster Bootcamp from Talent Garden Austria. 
+eventi is an application where users can host / list events and find other events. As a final project at the Codemaster Bootcamp, we were asked to create an application in teams and thus, Team Avengers was formed
 
 ## Team Avangers Initiative
 
@@ -17,6 +8,16 @@ This project is developed within the Codemaster Bootcamp from Talent Garden Aust
 **Scrum Master:** Johanna Horn
 
 **Tester:** Claudio Capitao, Alexander Wieser
+
+# Here are some snippets of the project:
+
+## Landing Page:
+<br/>
+![animation-home](https://user-images.githubusercontent.com/64739763/109396817-a85ea500-7933-11eb-8865-8b1969dfbefa.gif)
+
+## Explore Page:
+<br/>
+![animation-explore](https://user-images.githubusercontent.com/64739763/109397517-3d16d200-7937-11eb-98af-ab2d59dbf174.gif)
 
 
 ### Set up Team GitRepo
