@@ -53,7 +53,7 @@ In order to prevent events that are unaccounted for, you have to create an event
 ![animation-hostevent](https://user-images.githubusercontent.com/64739763/109398096-cc71b480-793a-11eb-89fa-bfc1947ed4e5.gif)
 
 
-### Set up Team GitRepo
+### Set up GitRepo
 
 1. fork this repo 
 
