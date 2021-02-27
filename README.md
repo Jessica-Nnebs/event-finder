@@ -13,10 +13,12 @@ eventi is an application where users can host / list events and find other event
 
 ## Landing Page:
 <br/>
+
 ![animation-home](https://user-images.githubusercontent.com/64739763/109396817-a85ea500-7933-11eb-8865-8b1969dfbefa.gif)
 
 ## Explore Page:
 <br/>
+
 ![animation-explore](https://user-images.githubusercontent.com/64739763/109397517-3d16d200-7937-11eb-98af-ab2d59dbf174.gif)
 
 
