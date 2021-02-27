@@ -9,15 +9,37 @@ eventi is an application where users can host / list events and find other event
 
 **Tester:** Claudio Capitao, Alexander Wieser
 
+<br>
+
+### Languages and Tools used:
+
+<img align="left" alt="html" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />
+
+<img align="left" alt="tailwind" width="26px" src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.cb8046c163f77190406dfbf4dec89848.svg" />
+
+<img align="left" alt="JavaScript" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" />
+
+<img align="left" alt="React" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" />
+
+<img align="left" alt="Node.js" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png" />
+
+<img align="left" alt="mySQL" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png" />
+
+<img align="left" alt="leaflet" width="26px" src="https://leafletjs.com/docs/images/logo.png" />
+
+<img align="left" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />
+
+<br>
 # Here are some snippets of the project:
 
 ## Landing Page:
-<br/>
+search for events based on location and event title
+<br>
 
 ![animation-home](https://user-images.githubusercontent.com/64739763/109396817-a85ea500-7933-11eb-8865-8b1969dfbefa.gif)
 
 ## Explore Page:
-<br/>
+<br>
 
 ![animation-explore](https://user-images.githubusercontent.com/64739763/109397517-3d16d200-7937-11eb-98af-ab2d59dbf174.gif)
 
