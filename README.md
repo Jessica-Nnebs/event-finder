@@ -50,7 +50,7 @@ In order to prevent events that are unaccounted for, you have to create an event
 
 <br>
 
-![animation-explore](https://user-images.githubusercontent.com/64739763/109397517-3d16d200-7937-11eb-98af-ab2d59dbf174.gif)
+![animation-hostevent](https://user-images.githubusercontent.com/64739763/109398096-cc71b480-793a-11eb-89fa-bfc1947ed4e5.gif)
 
 
 ### Set up Team GitRepo
