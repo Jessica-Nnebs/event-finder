@@ -46,7 +46,7 @@ more detailed search and tailored events
 ![animation-explore](https://user-images.githubusercontent.com/64739763/109397517-3d16d200-7937-11eb-98af-ab2d59dbf174.gif)
 
 ### Login to enable event Hosting:
-In order to prevent events that are unaccounted for, you have to create an eventi account. These accounts also serves as a contact point for event particpants, in case further information could be required from the event host 
+In order to prevent events that are unaccounted for, you have to create an eventi account. These accounts also serves as a contact point for event particpants, in case further information could be required from the event host . **username: anna ; password: user**
 
 <br>
 
