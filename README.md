@@ -32,19 +32,19 @@ eventi is an application where users can host / list events and find other event
 <br>
 
 
-# Landing Page:
+### Landing Page:
 search for events based on location and event title
 <br>
 
 ![animation-home](https://user-images.githubusercontent.com/64739763/109396817-a85ea500-7933-11eb-8865-8b1969dfbefa.gif)
 
-# Explore Page:
+### Explore Page:
 more detailed search and tailored events
 <br>
 
 ![animation-explore](https://user-images.githubusercontent.com/64739763/109397517-3d16d200-7937-11eb-98af-ab2d59dbf174.gif)
 
-# Login to enable event Hosting:
+### Login to enable event Hosting:
 In order to prevent events that are unaccounted for, you have to create an eventi account. These accounts also serves as a contact point for event particpants, in case further information could be required from the event host 
 
 <br>
