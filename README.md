@@ -31,7 +31,6 @@ eventi is an application where users can host / list events and find other event
 
 <br>
 
-
 ### Landing Page:
 search for events based on location and event title
 <br>
