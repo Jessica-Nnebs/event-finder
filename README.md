@@ -1,9 +1,18 @@
+# eventi - the new way of finding and hosting events
+
+**Landing Page:**
+![animation-home](https://user-images.githubusercontent.com/64739763/109396817-a85ea500-7933-11eb-8865-8b1969dfbefa.gif)
+
+**Explore Page:**
+![animation-explore](https://user-images.githubusercontent.com/64739763/109397517-3d16d200-7937-11eb-98af-ab2d59dbf174.gif)
+
+
 # Project made by the Team Avengers Initiative 
 This project is developed within the Codemaster Bootcamp from Talent Garden Austria. 
 
 ## Team Avangers Initiative
 
-**Product Owner:** Jessica 
+**Product Owner:** Jessica Nnebedum
 
 **Scrum Master:** Johanna Horn
 
@@ -29,6 +38,10 @@ git remote add upstream https://github.com/jvnhrn/event-finder
 5.pull all code from the original repository
 
 git pull upstream main
+
+6. run ` npm install ` to install all the dependencies
+
+7. run ` npm start ` to launch the react application
 
 
 ### Note: pull the lates version of the main repo 
