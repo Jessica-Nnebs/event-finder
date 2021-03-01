@@ -37,7 +37,7 @@ eventi is an application where users can host / list events and find other event
 search for events based on location and event title
 <br>
 
-![eventi-home_Trim](https://user-images.githubusercontent.com/64739763/109527814-5e50fd00-7ab4-11eb-9c48-7f6507c46f80.gif)
+![lasteventihometry](https://user-images.githubusercontent.com/64739763/109528440-f3ec8c80-7ab4-11eb-8fa6-a4500b415d84.gif)
 
 ### Explore Page:
 more detailed search and tailored events
